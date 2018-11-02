@@ -1,5 +1,5 @@
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-
+// process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+const port = process.env.PORT || 3000;
 // Requiring dependencies
 var mongoose = require('mongoose');
 
@@ -14,7 +14,7 @@ var app = express();
 var passport = require('./config/passport')();
 
 // Bootstrap application
-app.listen(3000);
+app.listen(port);
 
 // Tell developer about it
-console.log('Server running at http://localhost:3000/');
+console.log('Server running at port', port);
